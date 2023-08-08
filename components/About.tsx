@@ -18,7 +18,7 @@ export default function About() {
             id="about"
             ref={ref}
         >
-            <SectionHeading title="About me" />
+            <SectionHeading title="About me!" />
             <p
                 className='mb-3'
             >
