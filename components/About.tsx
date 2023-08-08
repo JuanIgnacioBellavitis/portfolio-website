@@ -22,7 +22,7 @@ export default function About() {
             <p
                 className='mb-3'
             >
-                After graduating from high school in communication from the school,
+                After graduating from high school,
                 I decided to pursue my passion for programming.
                 I enrolled in the Programming Technician career where I learned{" "}
                 <span className="font-medium">full-stack web development</span>.{" "}
