@@ -23,6 +23,7 @@ export default function Projects() {
                     ))
                 }
             </div>
+            <h2 className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40'>More projects in coming...</h2>
         </section>
     )
 }
