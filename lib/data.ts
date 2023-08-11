@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
+import portfolio from "@/public/Portfolio.png";
 
 export const links = [
   {
@@ -79,6 +80,14 @@ export const projectsData = [
     imageUrl: quizApp,
     projectUrl: "https://github.com/JuanIgnacioBellavitis/quiz-app",
    },
+   {
+    id: 2,
+    title: "My portfolio",
+    description: "This is my portfolio, here you can know more about me.",
+    tags: ["React", "Typescript", "Next.js", "Framer Motion", "Tailwind"],
+    imageUrl: portfolio,
+    projectUrl: "https://github.com/JuanIgnacioBellavitis/portfolio-website"
+   }
 ] as const;
 
 export const skillsData = [
