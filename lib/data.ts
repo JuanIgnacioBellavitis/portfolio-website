@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
 import portfolio from "@/public/Portfolio.png";
+import carHub from "@/public/CarHub.png";
 
 export const links = [
   {
@@ -87,6 +88,14 @@ export const projectsData = [
     tags: ["React", "Typescript", "Next.js", "Framer Motion", "Tailwind"],
     imageUrl: portfolio,
     projectUrl: "https://github.com/JuanIgnacioBellavitis/portfolio-website"
+   },
+   {
+    id: 3,
+    title: "CarHub",
+    description: "Users online effortless car discovery, reservation, and rental. Seamlessly explore diverse vehicle options, simplify booking, and experience exceptional service—all in one platform.",
+    tags: ["React", "Typescript", "Next.js", "Tailwind"],
+    imageUrl: carHub,
+    projectUrl: "https://github.com/JuanIgnacioBellavitis/CarHub-Project"
    }
 ] as const;
 
