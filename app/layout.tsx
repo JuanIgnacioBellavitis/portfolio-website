@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import Footer from '@/components/Footer'
 import ThemeSwitch from '@/components/Theme-Switch'
 import ThemeContextProvider from '@/context/Theme-context'
+import { ParticlesComponent } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,7 +44,7 @@ export default function RootLayout({
             {children}
             <Footer />
             <Toaster position='top-right' />
-            <ThemeSwitch />
+            <ThemeSwitch />            
           </ActivesectionContextProvider>          
         </ThemeContextProvider>
 
