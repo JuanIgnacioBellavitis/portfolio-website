@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
+import AdminDashboard from "@/public/AdminDashboard.png";
 import portfolio from "@/public/Portfolio.png";
 import carHub from "@/public/CarHub.png";
 
@@ -37,16 +38,14 @@ export const experiencesData = [
   {
     title: "Graduated University Technician in Computer Systems.",
     location: "Buenos Aires, Argentina",
-    description:
-      `I graduated after 3 years of studying and found my first job as a FullStack developer.`,
+    description: `I graduated after 3 years of studying and found my first job as a FullStack developer.`,
     icon: createElement(LuGraduationCap),
     date: "2019 - 2021",
   },
   {
     title: "Full-Stack Software Developer Trainee in GOIAR",
     location: "Buenos Aires, Argentina",
-    description:
-      `In my first job, I was involved in the strategic development of Qavant, a potent HR administration solution for
+    description: `In my first job, I was involved in the strategic development of Qavant, a potent HR administration solution for
       internal and external clients; streamlined database data loads, emphasized user experience,
       and tailored the tool's appearance and access features to enhance user satisfaction and usability while I was studying`,
     icon: createElement(CgWorkAlt),
@@ -55,8 +54,7 @@ export const experiencesData = [
   {
     title: "Full-Stack Software Developer in Grupo Multi",
     location: "Buenos Aires, Argentina",
-    description:
-    `Led the creation of advanced logistics web applications for Grupo Multi's warehouses, employing C#, 
+    description: `Led the creation of advanced logistics web applications for Grupo Multi's warehouses, employing C#, 
     .NET Framework for robust back-end solutions, and HTML, CSS, JavaScript, and Bootstrap for user-friendly front-end experiences..`,
     icon: createElement(CgWorkAlt),
     date: "2022 - 2023",
@@ -64,11 +62,10 @@ export const experiencesData = [
   {
     title: "Front-Stack Software Developer in Identity on Field",
     location: "Buenos Aires, Argentina",
-    description:
-      `I'm still working as a full-stack developer while studying for a degree in Information Systems.`,
+    description: `I'm still working as a full-stack developer while studying for a degree in Information Systems.`,
     icon: createElement(FaReact),
     date: "2023 - present",
-  }
+  },
 ] as const;
 
 export const projectsData = [
@@ -80,23 +77,34 @@ export const projectsData = [
     tags: ["React", "Axios", "Redux"],
     imageUrl: quizApp,
     projectUrl: "https://github.com/JuanIgnacioBellavitis/quiz-app",
-   },
-   {
+  },
+  {
     id: 2,
-    title: "My portfolio",
-    description: "This is my portfolio, here you can know more about me.",
-    tags: ["React", "Typescript", "Next.js", "Framer Motion", "Tailwind"],
-    imageUrl: portfolio,
-    projectUrl: "https://github.com/JuanIgnacioBellavitis/portfolio-website"
-   },
-   {
+    title: "Admin Dashboard",
+    description: "Admin Dashboard with enterprise level.",
+    tags: [
+      "React",
+      "Typescript",
+      "Material UI",
+      "Nivo Charts",
+      "Formik",
+      "Yup",
+      "FullCalendar",
+      "Data Grid",
+    ],
+    imageUrl: AdminDashboard,
+    projectUrl:
+      "https://github.com/JuanIgnacioBellavitis/Admin-Dashboard/tree/main/admin-dashboard",
+  },
+  {
     id: 3,
     title: "CarHub",
-    description: "Users online effortless car discovery, reservation, and rental. Seamlessly explore diverse vehicle options, simplify booking, and experience exceptional service—all in one platform.",
+    description:
+      "Users online effortless car discovery, reservation, and rental. Seamlessly explore diverse vehicle options, simplify booking, and experience exceptional service—all in one platform.",
     tags: ["React", "Typescript", "Next.js", "Tailwind"],
     imageUrl: carHub,
-    projectUrl: "https://github.com/JuanIgnacioBellavitis/CarHub-Project"
-   }
+    projectUrl: "https://github.com/JuanIgnacioBellavitis/CarHub-Project",
+  },
 ] as const;
 
 export const skillsData = [
