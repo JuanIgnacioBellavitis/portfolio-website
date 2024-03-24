@@ -8,6 +8,9 @@ import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/Theme-Switch";
 import ThemeContextProvider from "@/context/Theme-context";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import LanguageSwitch from "@/components/Language-Switch";
+import "../lib/language";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,17 +44,19 @@ export default function RootLayout({
            sm:w-[68.75rem] md:left[-33rem] lg:left-[-28rem] 
            xl-left-[-15rem] 2xl::left-[-5rem] dark:bg-[#676394]"
         ></div>
-
-        <ThemeContextProvider>
-          <ActivesectionContextProvider>
-            <Header />
-            {children}
-            <SpeedInsights />
-            <Footer />
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActivesectionContextProvider>
-        </ThemeContextProvider>
+        <Suspense fallback="loading...">
+          <ThemeContextProvider>
+            <ActivesectionContextProvider>
+              <Header />
+              {children}
+              <SpeedInsights />
+              <Footer />
+              <Toaster position="top-right" />
+              <LanguageSwitch />
+              <ThemeSwitch />
+            </ActivesectionContextProvider>
+          </ThemeContextProvider>
+        </Suspense>
       </body>
     </html>
   );

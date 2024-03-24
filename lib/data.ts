@@ -4,7 +4,6 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
 import AdminDashboard from "@/public/AdminDashboard.png";
-import portfolio from "@/public/Portfolio.png";
 import carHub from "@/public/CarHub.png";
 
 export const links = [
@@ -36,7 +35,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated University Technician in Computer Systems.",
+    title: "Graduated University Technician in Computer Systems",
     location: "Buenos Aires, Argentina",
     description: `I graduated after 3 years of studying and found my first job as a FullStack developer.`,
     icon: createElement(LuGraduationCap),

@@ -9,11 +9,12 @@ import Link from "next/link";
 import photo from "@/public/Photo.jpg";
 import React from "react";
 import { useActiveSection } from "@/context/Active-section-context";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSection();
-
+  const { t } = useTranslation();
   return (
     <section
       className="mb-28 max-w-[50rem] text-center scroll-mt-[100rem] sm:mb-0"
@@ -62,12 +63,15 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Juan.</span> I'm a
-        <span className="font-bold"> full-stack developer</span> with
-        <span className="font-bold"> 4 years</span> of experience. I enjoy
-        building
-        <span className="italic"> sites & apps</span>. My focus is
-        <span className="underline"> React and NodeJs</span>.
+        {/* <span className="font-bold">{t("intro")}.</span> */}
+        <Trans i18nKey="intro">
+          <span className="font-bold">Hello, I'm Juan.</span> I'm a
+          <span className="font-bold"> full-stack developer</span> with
+          <span className="font-bold"> 4 years</span> of experience. I enjoy
+          building
+          <span className="italic"> sites & apps</span>. My focus is
+          <span className="underline"> React and NodeJs</span>.
+        </Trans>
       </motion.h1>
 
       <motion.div
@@ -88,7 +92,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here!{" "}
+          {t("contact_here")}{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -99,7 +103,7 @@ export default function Intro() {
           href="/Juan_Ignacio_Bellavitis_Resume.pdf"
           download
         >
-          Download CV{" "}
+          {t("download_cv")}{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1" />
         </a>
 
