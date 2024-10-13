@@ -1,6 +1,5 @@
 "use client";
-import { useTheme } from "@/context/Theme-context";
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function LanguageSwitch() {
