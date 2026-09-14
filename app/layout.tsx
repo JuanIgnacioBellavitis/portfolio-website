@@ -14,10 +14,48 @@ import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://juanbellavitis-portfolio.vercel.app";
+const TITLE = "Juan Ignacio Bellavitis | Senior Full Stack Software Engineer";
+const DESCRIPTION =
+  "Senior Full Stack Software Engineer with 6 years of experience building distributed backends and modular frontends with React, NestJS, Java and AWS. Based in Madrid, Spain.";
+
 export const metadata: Metadata = {
-  title: "Juan Ignacio Bellavitis | Senior Full Stack Software Engineer",
-  description:
-    "Senior Full Stack Software Engineer with 6 years of experience building scalable web applications with React, NestJS, Java and AWS. Based in Madrid, Spain.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s — Juan Ignacio Bellavitis",
+  },
+  description: DESCRIPTION,
+  keywords: [
+    "Full Stack Engineer",
+    "Software Engineer",
+    "React",
+    "NestJS",
+    "Java",
+    "TypeScript",
+    "AWS",
+    "Microfrontends",
+    "Distributed Systems",
+    "Madrid",
+    "Juan Bellavitis",
+    "Juan Ignacio Bellavitis",
+  ],
+  authors: [{ name: "Juan Ignacio Bellavitis", url: SITE_URL }],
+  creator: "Juan Ignacio Bellavitis",
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: "Juan Ignacio Bellavitis",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +64,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+      {/* Blocking script: sets dark class before first paint to avoid flash */}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}`,
+          }}
+        />
+      </head>
       <body
         className={`${inter.className}
          bg-gray-50 text-gray-950 relative pt-28 sm:pt-36
