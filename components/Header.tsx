@@ -8,15 +8,19 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSection } from "@/context/Active-section-context";
 import { useTranslation } from "react-i18next";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { setActiveSection, activeSection, setTimeOfLastClick } =
     useActiveSection();
   const { i18n } = useTranslation();
+  const pathname = usePathname();
   const navLinks: readonly NavLink[] =
     i18n.language === "de" ? linksDe : links;
 
   const sectionFor = (hash: string) => links.find((l) => l.hash === hash)?.name;
+
+  if (pathname.startsWith("/work/")) return null;
 
   return (
     <header className="z-[999] relative">
