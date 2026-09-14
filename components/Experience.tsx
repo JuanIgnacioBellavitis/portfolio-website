@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import { experiencesData } from "@/lib/data";
 import { experiencesDataDe } from "@/lib/dataDe";
+import { experiencesDataEs } from "@/lib/dataEs";
 import type { ExperienceItem } from "@/lib/types";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -21,7 +22,9 @@ export default function Experience() {
   const { theme } = useTheme();
 
   const experience: readonly ExperienceItem[] =
-    i18n.language === "de" ? experiencesDataDe : experiencesData;
+    i18n.language === "de" ? experiencesDataDe
+    : i18n.language === "es" ? experiencesDataEs
+    : experiencesData;
 
   return (
     <section
