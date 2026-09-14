@@ -15,8 +15,9 @@ import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Juan | Personal Portfolio",
-  description: "Juan is a full-stack developer with 2 years of experience",
+  title: "Juan Ignacio Bellavitis | Senior Full Stack Software Engineer",
+  description:
+    "Senior Full Stack Software Engineer with 6 years of experience building scalable web applications with React, NestJS, Java and AWS. Based in Madrid, Spain.",
 };
 
 export default function RootLayout({
