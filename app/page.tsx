@@ -6,7 +6,6 @@ import {
   Skills,
   Experience,
   Contact,
-  ParticlesComponent,
 } from "@/components/index";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
-      <ParticlesComponent />
     </main>
   );
 }
