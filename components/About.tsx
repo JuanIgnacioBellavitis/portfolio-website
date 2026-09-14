@@ -21,23 +21,24 @@ export default function About() {
       <SectionHeading title={t("about_me_title")} />
       <Trans i18nKey="about_me">
         <p className="mb-3">
-          After graduating from high school, I decided to pursue my passion for
-          programming. I enrolled in the Programming Technician career where I
-          learned{" "}
-          <span className="font-medium">full-stack web development</span>.{" "}
-          <span className="italic">My favorite part of programming</span> is the
-          problem-solving aspect. I <span className="underline">love</span> the
-          feeling of finally figuring out a solution to a problem. My core stack
-          is <span className="font-medium">React, Node.js, and PostgreSQL</span>
-          . I am also familiar with TypeScript and Prisma. I am always looking
-          to learn new technologies. I currently work for
-          <span className="font-medium"> SiloReal</span>, in a full time
-          position as a software developer.
+          I'm a Senior Full Stack Software Engineer with
+          <span className="font-medium"> six years of experience</span> building
+          production systems. Most of my work sits in
+          <span className="italic"> distributed backends and modular frontends</span>:
+          REST microservices, event-driven messaging and microfrontend
+          architectures. What I
+          <span className="underline"> enjoy most</span> is the point where
+          business rules meet architecture — understanding a domain well enough
+          to pick the right trade-off. My core stack is
+          <span className="font-medium"> React, NestJS, Java and PostgreSQL</span>,
+          running on AWS. I currently work at
+          <span className="font-medium"> Intramed</span>, on a platform used by
+          healthcare professionals across Latin America.
         </p>
         <p>
-          <span className="italic">When I'm not coding</span>, I enjoy playing
-          video games, watching movies, and going to the gym. I also enjoy{" "}
-          <span className="font-medium">learning new things</span>.
+          <span className="italic">Outside of work</span>, I'm based in Madrid
+          as an EU citizen. I spend my spare time on football, films and
+          <span className="font-medium"> learning new things</span>.
         </p>
       </Trans>
     </motion.section>

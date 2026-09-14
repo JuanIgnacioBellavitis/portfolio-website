@@ -38,9 +38,6 @@ export default function Projects() {
             </Fragment>
           ))}
       </div>
-      <h2 className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
-        {t("more_projects")}
-      </h2>
     </section>
   );
 }
