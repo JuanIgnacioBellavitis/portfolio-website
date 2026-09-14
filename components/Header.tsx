@@ -16,7 +16,6 @@ export default function Header() {
   const navLinks: readonly NavLink[] =
     i18n.language === "de" ? linksDe : links;
 
-  // Section names are tracked in English; the hash is the only locale-stable key.
   const sectionFor = (hash: string) => links.find((l) => l.hash === hash)?.name;
 
   return (

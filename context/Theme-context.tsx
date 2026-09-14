@@ -30,10 +30,6 @@ export default function ThemeContextProvider({children} : ThemeContextProviderPr
       }
     };
   
-    // localStorage and matchMedia only exist after mount, so the stored theme
-    // cannot be read during render. This causes a brief light-theme flash for
-    // dark-mode users; fixing it needs a blocking script before first paint.
-    /* eslint-disable react-hooks/set-state-in-effect */
     useEffect(() => {
       const localTheme = localStorage.getItem("theme") as Theme | null;
       
@@ -48,7 +44,6 @@ export default function ThemeContextProvider({children} : ThemeContextProviderPr
         document.documentElement.classList.add("dark");
       }
     }, []);
-    /* eslint-enable react-hooks/set-state-in-effect */
     
     return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
 }

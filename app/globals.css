@@ -2,8 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Tailwind 4 defaults borders to currentColor; the v3 default keeps the
-   existing look of every bordered element on the site. */
 @layer base {
   *,
   ::after,
