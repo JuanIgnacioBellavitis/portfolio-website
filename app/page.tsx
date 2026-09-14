@@ -7,13 +7,14 @@ import {
   Experience,
   Contact,
 } from "@/components/index";
+import { SITE_URL } from "@/lib/constants";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Juan Ignacio Bellavitis",
   jobTitle: "Senior Full Stack Software Engineer",
-  url: "https://juanbellavitis-portfolio.vercel.app",
+  url: SITE_URL,
   sameAs: [
     "https://www.linkedin.com/in/juan-ignacio-bellavitis/",
     "https://github.com/JuanIgnacioBellavitis",

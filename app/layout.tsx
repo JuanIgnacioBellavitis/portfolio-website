@@ -14,7 +14,7 @@ import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const SITE_URL = "https://juanbellavitis-portfolio.vercel.app";
+import { SITE_URL } from "@/lib/constants";
 const TITLE = "Juan Ignacio Bellavitis | Senior Full Stack Software Engineer";
 const DESCRIPTION =
   "Senior Full Stack Software Engineer with 6 years of experience building distributed backends and modular frontends with React, NestJS, Java and AWS. Based in Madrid, Spain.";

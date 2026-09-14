@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
 }
 
-const SITE_URL = "https://juanbellavitis-portfolio.vercel.app";
+import { SITE_URL } from "@/lib/constants";
 
 export async function generateMetadata({
   params,

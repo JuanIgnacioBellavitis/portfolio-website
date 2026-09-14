@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/work";
-
-const BASE = "https://juanbellavitis-portfolio.vercel.app";
+import { SITE_URL as BASE } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
