@@ -3,6 +3,7 @@ import Link from "next/link";
 import { caseStudies, getCaseStudy } from "@/lib/work";
 import type { Metadata } from "next";
 import { BsArrowLeft } from "react-icons/bs";
+import { SectionBlock, Chip } from "./components";
 
 // ─── Static generation ────────────────────────────────────────────────────────
 
@@ -22,35 +23,6 @@ export async function generateMetadata({
     title: `${cs.title} — Juan Ignacio Bellavitis`,
     description: cs.cardDescription,
   };
-}
-
-// ─── Components ───────────────────────────────────────────────────────────────
-
-function SectionBlock({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="mb-12">
-      <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">
-        {title}
-      </h2>
-      <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
-        {children}
-      </div>
-    </section>
-  );
-}
-
-function Chip({ label }: { label: string }) {
-  return (
-    <span className="borderBlack rounded-full bg-white px-4 py-1.5 text-sm text-gray-700 dark:bg-white/10 dark:text-white/80">
-      {label}
-    </span>
-  );
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
