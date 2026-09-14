@@ -1,6 +1,5 @@
 import React, { createElement } from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
 import AdminDashboard from "@/public/AdminDashboard.png";
@@ -35,35 +34,76 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated University Technician in Computer Systems",
-    location: "Buenos Aires, Argentina",
-    description: `I graduated after 3 years of studying and found my first job as a FullStack developer.`,
+    title: "University Technician in Programming",
+    location: "National Technological University (UTN), Argentina",
+    description: `Started my formal education in software development while taking my first steps
+      as a professional developer.`,
     icon: createElement(LuGraduationCap),
     date: "2019 - 2021",
   },
   {
-    title: "Full-Stack Software Developer Trainee in GOIAR",
+    title: "Software Developer at GOIAR S.A.S.",
     location: "Buenos Aires, Argentina",
-    description: `In my first job, I was involved in the strategic development of Qavant, a potent HR administration solution for
-      internal and external clients; streamlined database data loads, emphasized user experience,
-      and tailored the tool's appearance and access features to enhance user satisfaction and usability while I was studying`,
+    description: `Built and evolved Qavant, a human resources management platform. Customized the user
+      interface to meet client requirements and implemented optimizations for both internal and
+      external users, working with C#, .NET, SQL Server and JavaScript.`,
     icon: createElement(CgWorkAlt),
     date: "2020 - 2022",
   },
   {
-    title: "Full-Stack Software Developer in Grupo Multi",
+    title: "University Technician in Information Systems",
+    location: "National Technological University (UTN), Argentina",
+    description: `Second technical degree, deepening systems analysis and design on top of my
+      programming background.`,
+    icon: createElement(LuGraduationCap),
+    date: "2022",
+  },
+  {
+    title: "Software Developer at Multiradio",
     location: "Buenos Aires, Argentina",
-    description: `Led the creation of advanced logistics web applications for Grupo Multi's warehouses, employing C#, 
-    .NET Framework for robust back-end solutions, and HTML, CSS, JavaScript, and Bootstrap for user-friendly front-end experiences..`,
+    description: `Owned the company's logistics control and management application. Analysed customer
+      feedback to identify weak points and shipped improvements that made warehouse operations more
+      organised and efficient, using C#, .NET, SQL Server and JavaScript.`,
     icon: createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
   {
-    title: "Front-Stack Software Developer in Identity on Field",
+    title: "Software Developer at SiloReal",
     location: "Buenos Aires, Argentina",
-    description: `I'm still working as a full-stack developer while studying for a degree in Information Systems.`,
-    icon: createElement(FaReact),
-    date: "2023 - present",
+    description: `Developed AgTech web and mobile applications for crop management, including satellite
+      monitoring of silo bags and real-time data collection from soil and climate sensors feeding an
+      automated alert system. Built with React, React Native, Node.js with Express, MySQL and AWS.`,
+    icon: createElement(CgWorkAlt),
+    date: "2023 - 2025",
+  },
+  {
+    title: "Bachelor's Degree in Information Systems",
+    location: "Universidad de Palermo, Argentina",
+    description: `Completed my degree in Information Systems while working full time as a developer.`,
+    icon: createElement(LuGraduationCap),
+    date: "2023 - 2025",
+  },
+  {
+    title: "Software Engineer at Mercado Libre",
+    location: "Buenos Aires, Argentina",
+    description: `Worked on logistics pricing and carrier rate configuration across several Latin
+      American markets. Contributed to migrating and integrating Kangu's pricing management system into
+      Mercado Libre's architecture, and to a centralised logistics contracts platform acting as the
+      single source of truth between commercial agreements and operational configuration. React on the
+      front end, Java on distributed, high-traffic back-end services.`,
+    icon: createElement(CgWorkAlt),
+    date: "2025 - 2026",
+  },
+  {
+    title: "Senior Full Stack Software Engineer at Intramed",
+    location: "Remote from Madrid, Spain",
+    description: `Building full-stack features for one of Latin America's leading platforms for
+      healthcare professionals. Modular interfaces in React using a microfrontend architecture, REST
+      microservices in NestJS behind a gateway, PostgreSQL with TypeORM, async messaging with Apache
+      Kafka and caching with Redis on AWS. I also drive technical SEO work — indexing, metadata and
+      structured data — and take part in code reviews and architectural decisions.`,
+    icon: createElement(CgWorkAlt),
+    date: "2026 - present",
   },
 ] as const;
 
@@ -72,7 +112,7 @@ export const projectsData = [
     id: 1,
     title: "Quiz App",
     description:
-      "This is my first project. I worked as a full-stack developer on it. Users can choose the category, difficulty, type, and amount of questions.",
+      "Configurable quiz application where users pick category, difficulty, question type and question count, backed by a remote question API.",
     tags: ["React", "Axios", "Redux"],
     imageUrl: quizApp,
     projectUrl: "https://github.com/JuanIgnacioBellavitis/quiz-app",
@@ -80,7 +120,8 @@ export const projectsData = [
   {
     id: 2,
     title: "Admin Dashboard",
-    description: "Admin Dashboard with enterprise level.",
+    description:
+      "Enterprise-style admin dashboard with data grids, charts, calendar and form validation.",
     tags: [
       "React",
       "Typescript",
@@ -107,23 +148,31 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Astro",
   "React",
-  "Redux",
+  "React Native",
+  "Microfrontends",
   "TypeScript",
+  "JavaScript",
   "Next.js",
+  "Astro",
+  "Redux",
   "Tailwind",
+  "NestJS",
   "Node.js",
-  "Prisma",
+  "Express",
+  "Java",
   "C#",
   "ASP.NET",
-  ".NET MVC",
-  "Java",
-  "MongoDB",
-  "SQL Server",
+  "REST APIs",
+  "Microservices",
   "PostgreSQL",
+  "MySQL",
+  "SQL Server",
+  "MongoDB",
+  "TypeORM",
+  "Prisma",
+  "AWS",
+  "Apache Kafka",
+  "Redis",
   "Git",
 ] as const;

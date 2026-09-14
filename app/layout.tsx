@@ -9,14 +9,15 @@ import ThemeSwitch from "@/components/Theme-Switch";
 import ThemeContextProvider from "@/context/Theme-context";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import LanguageSwitch from "@/components/Language-Switch";
-import "../lib/language";
+import I18nProvider from "@/components/I18nProvider";
 import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Juan | Personal Portfolio",
-  description: "Juan is a full-stack developer with 2 years of experience",
+  title: "Juan Ignacio Bellavitis | Senior Full Stack Software Engineer",
+  description:
+    "Senior Full Stack Software Engineer with 6 years of experience building scalable web applications with React, NestJS, Java and AWS. Based in Madrid, Spain.",
 };
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.className}
          bg-gray-50 text-gray-950 relative pt-28 sm:pt-36
-         dark:bg-gray-900 dark:text-gray-50 dark: text-opacity-90`}
+         dark:bg-gray-900 dark:text-gray-50/90`}
       >
         <div
           className="bg-[#e2b9ba] absolute
@@ -45,17 +46,19 @@ export default function RootLayout({
            xl-left-[-15rem] 2xl::left-[-5rem] dark:bg-[#676394]"
         ></div>
         <Suspense fallback="loading...">
-          <ThemeContextProvider>
-            <ActivesectionContextProvider>
-              <Header />
-              {children}
-              <SpeedInsights />
-              <Footer />
-              <Toaster position="top-right" />
-              <LanguageSwitch />
-              <ThemeSwitch />
-            </ActivesectionContextProvider>
-          </ThemeContextProvider>
+          <I18nProvider>
+            <ThemeContextProvider>
+              <ActivesectionContextProvider>
+                <Header />
+                {children}
+                <SpeedInsights />
+                <Footer />
+                <Toaster position="top-right" />
+                <LanguageSwitch />
+                <ThemeSwitch />
+              </ActivesectionContextProvider>
+            </ThemeContextProvider>
+          </I18nProvider>
         </Suspense>
       </body>
     </html>

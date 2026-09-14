@@ -1,6 +1,5 @@
 import React, { createElement } from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import quizApp from "@/public/QuizApp.png";
 import AdminDashboard from "@/public/AdminDashboard.png";
@@ -16,64 +15,96 @@ export const linksDe = [
     hash: "#about",
   },
   {
-    name: "Projekte",
-    hash: "#projects",
+    name: "Erfahrung",
+    hash: "#experience",
   },
   {
     name: "Fähigkeiten",
     hash: "#skills",
   },
   {
-    name: "Erfahrung",
-    hash: "#experience",
+    name: "Projekte",
+    hash: "#projects",
   },
   {
-    name: "Kontaktiere ",
+    name: "Kontakt",
     hash: "#contact",
   },
 ] as const;
 
 export const experiencesDataDe = [
   {
-    title: "Abschluss als Universitätstechniker für Computersysteme",
-    location: "Buenos Aires, Argentinien",
+    title: "Universitätstechniker für Programmierung",
+    location: "Technische Nationaluniversität (UTN), Argentinien",
     description:
-      "Ich habe meinen Abschluss nach 3 Jahren Studium gemacht und meinen ersten Job als FullStack-Entwickler gefunden.",
+      "Beginn meiner formalen Ausbildung in der Softwareentwicklung, parallel zu meinen ersten Schritten als professioneller Entwickler.",
     icon: createElement(LuGraduationCap),
     date: "2019 - 2021",
   },
   {
-    title: "Full-Stack-Softwareentwicklungspraktikum bei GOIAR",
+    title: "Software Developer bei GOIAR S.A.S.",
     location: "Buenos Aires, Argentinien",
     description:
-      "In meinem ersten Job war ich an der strategischen Entwicklung von Qavant beteiligt, einer leistungsfähigen HR-Verwaltungslösung für interne und externe Kunden; optimierte Datenbankdatenladungen, betonte Benutzererfahrung und passte das Erscheinungsbild und die Zugriffsmerkmale des Tools an, um die Benutzerzufriedenheit und -benutzerfreundlichkeit zu verbessern, während ich studierte.",
+      "Entwicklung und Weiterentwicklung von Qavant, einer Plattform für das Personalmanagement. Anpassung der Benutzeroberfläche an Kundenanforderungen und Optimierungen für interne und externe Nutzer, mit C#, .NET, SQL Server und JavaScript.",
     icon: createElement(CgWorkAlt),
     date: "2020 - 2022",
   },
   {
-    title: "Full-Stack-Softwareentwickler bei Grupo Multi",
+    title: "Universitätstechniker für Informationssysteme",
+    location: "Technische Nationaluniversität (UTN), Argentinien",
+    description:
+      "Zweiter technischer Abschluss mit Schwerpunkt auf Systemanalyse und -design, aufbauend auf meiner Programmierausbildung.",
+    icon: createElement(LuGraduationCap),
+    date: "2022",
+  },
+  {
+    title: "Software Developer bei Multiradio",
     location: "Buenos Aires, Argentinien",
     description:
-      "Leitete die Erstellung fortschrittlicher Logistik-Webanwendungen für die Lagerhäuser von Grupo Multi, unter Verwendung von C#, .NET Framework für robuste Backend-Lösungen sowie HTML, CSS, JavaScript und Bootstrap für benutzerfreundliche Frontend-Erlebnisse.",
+      "Verantwortung für die Anwendung zur Logistiksteuerung und -verwaltung des Unternehmens. Auswertung von Kundenfeedback und Umsetzung von Verbesserungen, die den Lagerbetrieb effizienter und übersichtlicher gemacht haben, mit C#, .NET, SQL Server und JavaScript.",
     icon: createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
   {
-    title: "Front-Stack-Softwareentwickler bei Identity on Field",
+    title: "Software Developer bei SiloReal",
     location: "Buenos Aires, Argentinien",
     description:
-      "Ich arbeite immer noch als Full-Stack-Entwickler, während ich einen Abschluss in Informationssystemen mache.",
-    icon: createElement(FaReact),
-    date: "2023 - gegenwärtig",
+      "Entwicklung von AgTech-Web- und Mobile-Anwendungen für das Pflanzenmanagement, einschließlich Satellitenüberwachung von Silobags und Echtzeit-Datenerfassung über Boden- und Klimasensoren mit automatisiertem Alarmsystem. Umgesetzt mit React, React Native, Node.js mit Express, MySQL und AWS.",
+    icon: createElement(CgWorkAlt),
+    date: "2023 - 2025",
   },
-];
+  {
+    title: "Bachelor in Informationssystemen",
+    location: "Universidad de Palermo, Argentinien",
+    description:
+      "Abschluss des Studiums in Informationssystemen parallel zur Vollzeittätigkeit als Entwickler.",
+    icon: createElement(LuGraduationCap),
+    date: "2023 - 2025",
+  },
+  {
+    title: "Software Engineer bei Mercado Libre",
+    location: "Buenos Aires, Argentinien",
+    description:
+      "Arbeit an Logistik-Pricing und der Konfiguration von Carrier-Tarifen in mehreren lateinamerikanischen Märkten. Mitwirkung an der Migration und Integration des Pricing-Systems von Kangu in die Architektur von Mercado Libre sowie an einer zentralen Plattform für Logistikverträge als Single Source of Truth zwischen kommerziellen Vereinbarungen und operativer Konfiguration. React im Frontend, Java in verteilten Backend-Services mit hohem Traffic.",
+    icon: createElement(CgWorkAlt),
+    date: "2025 - 2026",
+  },
+  {
+    title: "Senior Full Stack Software Engineer bei Intramed",
+    location: "Remote aus Madrid, Spanien",
+    description:
+      "Entwicklung von Full-Stack-Features für eine der führenden Plattformen für medizinische Fachkräfte in Lateinamerika. Modulare Oberflächen in React mit Microfrontend-Architektur, REST-Microservices in NestJS hinter einem Gateway, PostgreSQL mit TypeORM, asynchrone Kommunikation über Apache Kafka und Caching mit Redis auf AWS. Außerdem verantwortlich für technisches SEO — Indexierung, Metadaten und strukturierte Daten — sowie Beteiligung an Code Reviews und Architekturentscheidungen.",
+    icon: createElement(CgWorkAlt),
+    date: "2026 - gegenwärtig",
+  },
+] as const;
 
 export const projectsDataDe = [
   {
     id: 1,
     title: "Quiz App",
     description:
-      "Dies ist mein erstes Projekt. Ich habe als Full-Stack-Entwickler daran gearbeitet. Benutzer können die Kategorie, Schwierigkeit, Typ und Anzahl der Fragen wählen.",
+      "Konfigurierbare Quiz-Anwendung, in der Kategorie, Schwierigkeit, Fragetyp und Anzahl der Fragen gewählt werden können, angebunden an eine externe Fragen-API.",
     tags: ["React", "Axios", "Redux"],
     imageUrl: quizApp,
     projectUrl: "https://github.com/JuanIgnacioBellavitis/quiz-app",
@@ -81,7 +112,8 @@ export const projectsDataDe = [
   {
     id: 2,
     title: "Admin Dashboard",
-    description: "Admin-Dashboard auf Unternehmensebene.",
+    description:
+      "Admin-Dashboard auf Unternehmensniveau mit Datentabellen, Charts, Kalender und Formularvalidierung.",
     tags: [
       "React",
       "Typescript",

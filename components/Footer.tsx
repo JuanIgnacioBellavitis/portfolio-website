@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className='mb-10 px-4 text-center text-gray-500'>
         <small className='mb-2 text-xs'>
-            &copy; 2023 Juani.
+            &copy; {new Date().getFullYear()} Juan Ignacio Bellavitis.
         </small>
         <p className='text-xs'>
-            <span className='font-semibold'>About this website:</span> builte with React & Next.js (App Router & Server Actions), Typescript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting.
+            Built with Next.js, TypeScript and Tailwind CSS.
         </p>
     </footer>
   )

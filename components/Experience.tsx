@@ -1,6 +1,6 @@
 "use client";
 import { useSectionInView } from "@/lib/hooks";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import SectionHeading from "./Section-heading";
 import {
   VerticalTimeline,
@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import { experiencesData } from "@/lib/data";
 import { experiencesDataDe } from "@/lib/dataDe";
+import type { ExperienceItem } from "@/lib/types";
 import "react-vertical-timeline-component/style.min.css";
 
 import { useTheme } from "@/context/Theme-context";
@@ -19,17 +20,8 @@ export default function Experience() {
 
   const { theme } = useTheme();
 
-  const [experience, setExperience] = useState<any>();
-
-  useEffect(() => {
-    switch (i18n.language) {
-      case "en":
-        setExperience(experiencesData);
-        break;
-      case "de":
-        setExperience(experiencesDataDe);
-    }
-  }, [i18n.language]);
+  const experience: readonly ExperienceItem[] =
+    i18n.language === "de" ? experiencesDataDe : experiencesData;
 
   return (
     <section
@@ -39,8 +31,7 @@ export default function Experience() {
     >
       <SectionHeading title={t("my_experience")} />
       <VerticalTimeline lineColor="">
-        {experience &&
-          experience.map((item: any, index: number) => (
+        {experience.map((item, index) => (
             <Fragment key={index}>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -65,7 +56,7 @@ export default function Experience() {
                   fontSize: "1.5rem",
                 }}
               >
-                <h3 className="font-semibold capitalize">{item.title}</h3>
+                <h3 className="font-semibold">{item.title}</h3>
                 <p className="font-normal !mt-0">{item.location}</p>
                 <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                   {item.description}

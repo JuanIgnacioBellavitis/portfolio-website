@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { useTranslation } from "react-i18next";
 
 export default function SubmitBtn() {
@@ -11,8 +11,8 @@ export default function SubmitBtn() {
     <button
       type="submit"
       className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full
-                 outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-opactity-65
-                 dark:bg-white dark:bg-opacity-10"
+                 outline-hidden transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-gray-900/65
+                 dark:bg-white/10"
       disabled={pending}
     >
       {pending ? (

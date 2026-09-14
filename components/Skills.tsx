@@ -3,7 +3,7 @@ import React from "react";
 import SectionHeading from "./Section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 const fadeInAnimationsVariants = {
@@ -34,7 +34,7 @@ export default function Skills() {
         {skillsData.map((skill, index) => (
           <motion.li
             className="bg-white borderBlack
-                        rounded-xl px-5 py-3 dark:bg-opacity-10 dark:text-white/80"
+                        rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
             key={index}
             variants={fadeInAnimationsVariants}
             initial="initial"

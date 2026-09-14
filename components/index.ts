@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import Projects from "./Projects";
-import ParticlesComponent from "./ParticlesComponent";
 
 export {
     About,
@@ -15,5 +14,4 @@ export {
     Projects,
     SectionDivider,
     Skills,
-    ParticlesComponent
 }

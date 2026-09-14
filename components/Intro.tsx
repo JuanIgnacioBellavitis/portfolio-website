@@ -1,6 +1,6 @@
 "use client";
 import { FaGithubSquare } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSectionInView } from "@/lib/hooks";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -63,14 +63,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        {/* <span className="font-bold">{t("intro")}.</span> */}
         <Trans i18nKey="intro">
           <span className="font-bold">Hello, I'm Juan.</span> I'm a
-          <span className="font-bold"> full-stack developer</span> with
-          <span className="font-bold"> 4 years</span> of experience. I enjoy
-          building
-          <span className="italic"> sites & apps</span>. My focus is
-          <span className="underline"> React and NodeJs</span>.
+          <span className="font-bold"> Senior Full Stack Software Engineer</span> with
+          <span className="font-bold"> 6 years</span> of experience building
+          <span className="italic"> scalable web applications</span>. My focus is
+          <span className="underline"> React, NestJS and Java</span>.
         </Trans>
       </motion.h1>
 
@@ -85,7 +83,7 @@ export default function Intro() {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex 
-                    items-center gap-2 rounded-full outline-none focus:scale-110 
+                    items-center gap-2 rounded-full outline-hidden focus:scale-110 
                     hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
           onClick={() => {
             setActiveSection("Contact");
@@ -98,9 +96,9 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full
-                    outline-none focus:scale-110 hover:scale-110 active:scale-105
+                    outline-hidden focus:scale-110 hover:scale-110 active:scale-105
                     transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Juan_Ignacio_Bellavitis_Resume.pdf"
+          href="/Juan_Ignacio_Bellavitis.pdf"
           download
         >
           {t("download_cv")}{" "}
