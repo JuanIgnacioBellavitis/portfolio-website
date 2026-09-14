@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import SectionHeading from "./Section-heading";
 import { caseStudies } from "@/lib/work";
+import { caseStudiesEs } from "@/lib/workEs";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -10,7 +11,8 @@ import { BsArrowRight } from "react-icons/bs";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const studies = i18n.language === "es" ? caseStudiesEs : caseStudies;
 
   return (
     <section
@@ -21,7 +23,7 @@ export default function Projects() {
       <SectionHeading title={t("my_projects_title")} />
 
       <div className="flex flex-col gap-6">
-        {caseStudies.map((cs, index) => (
+        {studies.map((cs, index) => (
           <motion.div
             key={cs.slug}
             initial={{ opacity: 0, y: 40 }}
