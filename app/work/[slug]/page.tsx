@@ -11,6 +11,8 @@ export function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
 }
 
+import { SITE_URL } from "@/lib/constants";
+
 export async function generateMetadata({
   params,
 }: {
@@ -19,9 +21,23 @@ export async function generateMetadata({
   const { slug } = await params;
   const cs = getCaseStudy(slug);
   if (!cs) return {};
+  const url = `${SITE_URL}/work/${cs.slug}`;
   return {
-    title: `${cs.title} — Juan Ignacio Bellavitis`,
+    title: cs.title,
     description: cs.cardDescription,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: cs.title,
+      description: cs.cardDescription,
+      siteName: "Juan Ignacio Bellavitis",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: cs.title,
+      description: cs.cardDescription,
+    },
   };
 }
 
@@ -36,8 +52,27 @@ export default async function CaseStudyPage({
   const cs = getCaseStudy(slug);
   if (!cs) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: cs.title,
+    description: cs.cardDescription,
+    author: {
+      "@type": "Person",
+      name: "Juan Ignacio Bellavitis",
+      url: SITE_URL,
+    },
+    url: `${SITE_URL}/work/${cs.slug}`,
+    keywords: cs.techStack.join(", "),
+  };
+
   return (
-    <main className="flex flex-col items-center px-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex flex-col items-center px-4">
       {/* Back link */}
       <div className="mt-8 mb-12 w-full max-w-3xl">
         <Link
@@ -115,5 +150,6 @@ export default async function CaseStudyPage({
         </SectionBlock>
       </article>
     </main>
+    </>
   );
 }

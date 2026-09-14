@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Juan Ignacio Bellavitis — Portfolio
 
-## Getting Started
+Personal portfolio for Juan Ignacio Bellavitis, Senior Full Stack Software Engineer. Live at [juanbellavitis-portfolio.vercel.app](https://juanbellavitis-portfolio.vercel.app).
 
-First, run the development server:
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript 5 |
+| UI | React 19 |
+| Styling | Tailwind CSS 4 |
+| Animation | Motion (Framer Motion successor) |
+| i18n | i18next + react-i18next (EN / DE) |
+| Email | Resend + React Email |
+| Deployment | Vercel |
+
+## Features
+
+- **Case studies** — dedicated `/work/[slug]` pages statically generated at build time
+- **Bilingual** — English and German, switchable at runtime
+- **Dark mode** — system preference detected on first paint (no flash)
+- **SEO** — Open Graph image (generated via `next/og`), sitemap, robots.txt, JSON-LD structured data
+- **Contact form** — server action backed by Resend
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requires **Node.js ≥ 20**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create a `.env.local` file:
 
-## Learn More
+```
+RESEND_API_KEY=re_...
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/
+  page.tsx              # Home (RSC)
+  layout.tsx            # Root layout — metadata, theme, i18n
+  sitemap.ts            # /sitemap.xml
+  robots.ts             # /robots.txt
+  opengraph-image.tsx   # Dynamic OG image (1200×630)
+  work/[slug]/
+    page.tsx            # Case study page (SSG)
+    components.tsx      # SectionBlock, Chip
+components/             # Client components (Header, About, Skills…)
+lib/
+  data.ts               # Navigation links, experience, skills (EN)
+  dataDe.ts             # Navigation links, experience (DE)
+  work.ts               # Case study data + types
+  language.ts           # i18next configuration
+context/                # ThemeContext, ActiveSectionContext
+actions/
+  SendEmail.ts          # Contact form server action
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Deployed on Vercel. Every push to `master` triggers a production deployment automatically. Feature work is done on separate branches and merged via pull request.
