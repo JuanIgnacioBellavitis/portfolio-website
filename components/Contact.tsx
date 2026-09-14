@@ -59,14 +59,14 @@ export default function Contact() {
         <input
           type="email"
           name="senderEmail"
-          className="h-14 rounded-lg borderBlack px-4 dark:bg-white/80 dark:focus:bg-white transition-all dark:outline-none"
+          className="h-14 rounded-lg borderBlack px-4 dark:bg-white/80 dark:focus:bg-white transition-all dark:outline-hidden"
           placeholder={t("your_email")}
           required
           maxLength={500}
         />
         <textarea
           name="message"
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white/80 dark:focus:bg-white transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white/80 dark:focus:bg-white transition-all dark:outline-hidden"
           placeholder={t("your_message")}
           required
           maxLength={5000}
