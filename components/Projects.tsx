@@ -1,27 +1,19 @@
 "use client";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useRef } from "react";
 import SectionHeading from "./Section-heading";
 import { projectsData } from "@/lib/data";
 import { projectsDataDe } from "@/lib/dataDe";
+import type { Project } from "@/lib/types";
 import Image from "next/image";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "motion/react";
 import { useSectionInView } from "@/lib/hooks";
 import { useTranslation } from "react-i18next";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects");
   const { t, i18n } = useTranslation();
-  const [projects, setProjects] = useState<any>();
-
-  useEffect(() => {
-    switch (i18n.language) {
-      case "en":
-        setProjects(projectsData);
-        break;
-      case "de":
-        setProjects(projectsDataDe);
-    }
-  }, [i18n.language]);
+  const projects: readonly Project[] =
+    i18n.language === "de" ? projectsDataDe : projectsData;
 
   return (
     <section
@@ -31,26 +23,23 @@ export default function Projects() {
     >
       <SectionHeading title={t("my_projects_title")} />
       <div>
-        {projects &&
-          projects.map((project: any) => (
-            <Fragment key={project.id}>
-              <Project {...project} />
-            </Fragment>
-          ))}
+        {projects.map((project) => (
+          <Fragment key={project.id}>
+            <ProjectCard {...project} />
+          </Fragment>
+        ))}
       </div>
     </section>
   );
 }
 
-type ProjectProps = (typeof projectsData)[number];
-
-function Project({
+function ProjectCard({
   title,
   description,
   tags,
   imageUrl,
   projectUrl,
-}: ProjectProps) {
+}: Project) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

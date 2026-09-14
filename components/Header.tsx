@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+import { motion } from "motion/react";
 import { links } from "@/lib/data";
 import { linksDe } from "@/lib/dataDe";
+import type { NavLink } from "@/lib/types";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSection } from "@/context/Active-section-context";
@@ -11,18 +12,12 @@ import { useTranslation } from "react-i18next";
 export default function Header() {
   const { setActiveSection, activeSection, setTimeOfLastClick } =
     useActiveSection();
-  const { t, i18n } = useTranslation();
-  const [link, setLinks] = useState<any>();
+  const { i18n } = useTranslation();
+  const navLinks: readonly NavLink[] =
+    i18n.language === "de" ? linksDe : links;
 
-  useEffect(() => {
-    switch (i18n.language) {
-      case "en":
-        setLinks(links);
-        break;
-      case "de":
-        setLinks(linksDe);
-    }
-  }, [i18n.language]);
+  // Section names are tracked in English; the hash is the only locale-stable key.
+  const sectionFor = (hash: string) => links.find((l) => l.hash === hash)?.name;
 
   return (
     <header className="z-[999] relative">
@@ -42,8 +37,9 @@ export default function Header() {
           className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium
             text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5"
         >
-          {link &&
-            link.map((link: any) => (
+          {navLinks.map((link) => {
+            const section = sectionFor(link.hash);
+            return (
               <motion.li
                 className="h-3/4 flex items-center justify-center relative"
                 key={link.hash}
@@ -56,17 +52,17 @@ export default function Header() {
                       px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300`,
                     {
                       "text-gray-950 dark:text-gray-200":
-                        activeSection === link.name,
+                        activeSection === section,
                     }
                   )}
                   href={link.hash}
                   onClick={() => {
-                    setActiveSection(link.name);
+                    if (section) setActiveSection(section);
                     setTimeOfLastClick(Date.now());
                   }}
                 >
                   {link.name}
-                  {link.name === activeSection && (
+                  {section === activeSection && (
                     <motion.span
                       className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                       layoutId="activeSection"
@@ -79,7 +75,8 @@ export default function Header() {
                   )}
                 </Link>
               </motion.li>
-            ))}
+            );
+          })}
         </ul>
       </nav>
     </header>

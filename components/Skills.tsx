@@ -3,7 +3,7 @@ import React from "react";
 import SectionHeading from "./Section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 const fadeInAnimationsVariants = {

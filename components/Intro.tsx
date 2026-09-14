@@ -1,6 +1,6 @@
 "use client";
 import { FaGithubSquare } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSectionInView } from "@/lib/hooks";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";

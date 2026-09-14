@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import SectionHeading from "./Section-heading";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSectionInView } from "@/lib/hooks";
 import { SendEmail } from "@/actions/SendEmail";
 import SubmitBtn from "./SubmitBtn";
