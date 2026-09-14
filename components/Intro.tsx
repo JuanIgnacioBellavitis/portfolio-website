@@ -34,28 +34,14 @@ export default function Intro() {
             <Image
               src={photo}
               alt="Juan Ignacio Bellavitis"
-              width="192"
-              height="192"
+              width="288"
+              height="288"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-whiter
-                shadow-xl"
+              className="h-36 w-36 rounded-full border-[0.35rem] border-white
+                shadow-xl object-cover"
             />
           </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1.3 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            😃
-          </motion.span>
         </div>
       </div>
       <motion.h1
