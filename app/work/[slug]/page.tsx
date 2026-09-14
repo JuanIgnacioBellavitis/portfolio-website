@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { caseStudies, getCaseStudy } from "@/lib/work";
 import type { Metadata } from "next";
-import { BsArrowLeft } from "react-icons/bs";
-import { SectionBlock, Chip } from "./components";
+import { SectionBlock, Chip, BackLink } from "./components";
 
 // ─── Static generation ────────────────────────────────────────────────────────
 
@@ -75,13 +73,7 @@ export default async function CaseStudyPage({
       <main className="flex flex-col items-center px-4">
       {/* Back link */}
       <div className="mt-8 mb-12 w-full max-w-3xl">
-        <Link
-          href="/#projects"
-          className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition dark:text-gray-400 dark:hover:text-white"
-        >
-          <BsArrowLeft />
-          Back to projects
-        </Link>
+        <BackLink />
       </div>
 
       <article className="w-full max-w-3xl pb-24">
@@ -98,18 +90,15 @@ export default async function CaseStudyPage({
           </p>
         </header>
 
-        {/* Overview */}
-        <SectionBlock title="Overview">
+        <SectionBlock titleKey="section_overview">
           <p>{cs.overview}</p>
         </SectionBlock>
 
-        {/* Business problem */}
-        <SectionBlock title="Business Problem">
+        <SectionBlock titleKey="section_business_problem">
           <p>{cs.businessProblem}</p>
         </SectionBlock>
 
-        {/* Constraints */}
-        <SectionBlock title="Constraints">
+        <SectionBlock titleKey="section_constraints">
           <ul className="list-disc list-outside ml-5 space-y-2">
             {cs.constraints.map((c) => (
               <li key={c}>{c}</li>
@@ -117,31 +106,25 @@ export default async function CaseStudyPage({
           </ul>
         </SectionBlock>
 
-        {/* Architecture */}
-        <SectionBlock title="Architecture">
+        <SectionBlock titleKey="section_architecture">
           <p>{cs.architecture}</p>
         </SectionBlock>
 
-        {/* My contribution */}
-        <SectionBlock title="My Contribution">
+        <SectionBlock titleKey="section_contribution">
           <p>{cs.contribution}</p>
         </SectionBlock>
 
-        {/* Trade-offs */}
-        <SectionBlock title="Trade-offs & Decisions">
+        <SectionBlock titleKey="section_tradeoffs">
           <p>{cs.tradeoffs}</p>
         </SectionBlock>
 
-        {/* Outcome */}
-        <SectionBlock title="Outcome">
+        <SectionBlock titleKey="section_outcome">
           <p>{cs.outcome}</p>
         </SectionBlock>
 
-        {/* Divider */}
         <hr className="my-12 border-black/10 dark:border-white/10" />
 
-        {/* Tech stack */}
-        <SectionBlock title="Tech Stack">
+        <SectionBlock titleKey="section_tech_stack">
           <div className="flex flex-wrap gap-2 mt-2">
             {cs.techStack.map((t) => (
               <Chip key={t} label={t} />

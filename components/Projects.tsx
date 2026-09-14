@@ -65,7 +65,7 @@ export default function Projects() {
 
               {/* CTA */}
               <span className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-900 dark:text-white group-hover:gap-2.5 transition-all">
-                Read case study
+                {t("read_case_study")}
                 <BsArrowRight className="opacity-70" />
               </span>
             </Link>
