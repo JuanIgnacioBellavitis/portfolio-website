@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { links } from "@/lib/data";
 import { linksDe } from "@/lib/dataDe";
+import { linksEs } from "@/lib/dataEs";
 import type { NavLink } from "@/lib/types";
 import Link from "next/link";
 import clsx from "clsx";
@@ -16,7 +17,9 @@ export default function Header() {
   const { i18n } = useTranslation();
   const pathname = usePathname();
   const navLinks: readonly NavLink[] =
-    i18n.language === "de" ? linksDe : links;
+    i18n.language === "de" ? linksDe
+    : i18n.language === "es" ? linksEs
+    : links;
 
   const sectionFor = (hash: string) => links.find((l) => l.hash === hash)?.name;
 
