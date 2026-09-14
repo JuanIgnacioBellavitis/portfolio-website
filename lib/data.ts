@@ -147,32 +147,54 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "React",
-  "React Native",
-  "Microfrontends",
-  "TypeScript",
-  "JavaScript",
-  "Next.js",
-  "Astro",
-  "Redux",
-  "Tailwind",
-  "NestJS",
-  "Node.js",
-  "Express",
-  "Java",
-  "C#",
-  "ASP.NET",
-  "REST APIs",
-  "Microservices",
-  "PostgreSQL",
-  "MySQL",
-  "SQL Server",
-  "MongoDB",
-  "TypeORM",
-  "Prisma",
-  "AWS",
-  "Apache Kafka",
-  "Redis",
-  "Git",
+export type SkillGroup = {
+  readonly label: string;
+  readonly skills: readonly string[];
+};
+
+export const skillsData: readonly SkillGroup[] = [
+  {
+    label: "Frontend",
+    skills: [
+      "React",
+      "React Native",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind",
+      "Redux",
+      "Microfrontends",
+      "Astro",
+    ],
+  },
+  {
+    label: "Backend",
+    skills: [
+      "NestJS",
+      "Node.js",
+      "Java",
+      "Express",
+      "C#",
+      "ASP.NET",
+      "REST APIs",
+      "Microservices",
+    ],
+  },
+  {
+    label: "Data & Storage",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQL Server",
+      "TypeORM",
+      "Prisma",
+      "Redis",
+      "Apache Kafka",
+    ],
+  },
+  {
+    label: "Cloud & Tools",
+    skills: ["AWS", "Git"],
+  },
 ] as const;

@@ -30,6 +30,7 @@ export default function ThemeContextProvider({children} : ThemeContextProviderPr
       }
     };
   
+    /* eslint-disable react-hooks/set-state-in-effect */
     useEffect(() => {
       const localTheme = localStorage.getItem("theme") as Theme | null;
       
@@ -44,6 +45,7 @@ export default function ThemeContextProvider({children} : ThemeContextProviderPr
         document.documentElement.classList.add("dark");
       }
     }, []);
+    /* eslint-enable react-hooks/set-state-in-effect */
     
     return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
 }
