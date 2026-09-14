@@ -20,15 +20,7 @@ i18next.use(initReactI18next).init({
         contact_here: "Contact me here!",
         download_cv: "Download CV",
         about_me_title: "About me",
-        about_me: `
-          <0>I'm a Senior Full Stack Software Engineer with<1> six years of experience</1> building
-           production systems. Most of my work sits in<3> distributed backends and modular frontends</3>:
-           REST microservices, event-driven messaging and microfrontend architectures. What I<5> enjoy
-           most</5> is the point where business rules meet architecture — understanding a domain well
-           enough to pick the right trade-off. My core stack is<7> React, NestJS, Java and PostgreSQL</7>,
-           running on AWS. I currently work at<9> Intramed</9>, on a platform used by healthcare
-           professionals across Latin America.</0><1><0>Outside of work</0>, I'm based in Madrid as an EU
-           citizen. I spend my spare time on football, films and<2> learning new things</2>.</1>`,
+        about_me: `<0>Six years building production systems at the intersection of<1> distributed backends</1> and modular frontends — REST microservices, event-driven architectures, microfrontend systems in React. The work I care about most sits at the boundary of business rules and system design: understanding a domain well enough to make<3> trade-offs intentionally</3>. Currently at<5> Intramed</5>, contributing to a platform for healthcare professionals across Latin America.</0><1>Based in Madrid as an EU citizen. Outside of work: football, films, and the occasional deep dive into something new.</1>`,
         my_projects_title: "My projects",
         my_experience: "My Experience",
         skills: "Skills",
@@ -52,17 +44,7 @@ i18next.use(initReactI18next).init({
         contact_here: "Kontaktieren Sie mich hier!",
         download_cv: "Lebenslauf herunterladen",
         about_me_title: "Über mich",
-        about_me: `
-          <0>Ich bin Senior Full Stack Software Engineer mit<1> sechs Jahren Erfahrung</1> in der
-           Entwicklung produktiver Systeme. Mein Schwerpunkt liegt auf<3> verteilten Backends und
-           modularen Frontends</3>: REST-Microservices, ereignisgetriebene Kommunikation und
-           Microfrontend-Architekturen. Am<5> meisten schätze ich</5> den Punkt, an dem Geschäftslogik
-           und Architektur zusammentreffen — eine Domäne so gut zu verstehen, dass man den richtigen
-           Kompromiss wählen kann. Mein Kernstack ist<7> React, NestJS, Java und PostgreSQL</7>,
-           betrieben auf AWS. Derzeit arbeite ich bei<9> Intramed</9>, an einer Plattform für
-           medizinische Fachkräfte in ganz Lateinamerika.</0><1><0>Außerhalb der Arbeit</0> lebe ich als
-           EU-Bürger in Madrid. In meiner Freizeit spiele ich Fußball, schaue Filme und<2> lerne gerne
-           Neues</2>.</1>`,
+        about_me: `<0>Sechs Jahre Entwicklung produktiver Systeme an der Schnittstelle von<1> verteilten Backends</1> und modularen Frontends — REST-Microservices, ereignisgesteuerte Architekturen, Microfrontend-Systeme in React. Was mich am meisten interessiert, liegt an der Grenze zwischen Geschäftslogik und Systemdesign: eine Domäne gut genug zu verstehen, um<3> Kompromisse bewusst zu treffen</3>. Derzeit bei<5> Intramed</5>, an einer Plattform für medizinische Fachkräfte in ganz Lateinamerika.</0><1>Ansässig in Madrid als EU-Bürger. Außerhalb der Arbeit: Fußball, Filme und gelegentlich ein tiefes Eintauchen in etwas Neues.</1>`,
         my_projects_title: "Meine Projekte",
         my_experience: "Meine Erfahrung",
         skills: "Fähigkeiten",

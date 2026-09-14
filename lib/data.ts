@@ -96,7 +96,7 @@ export const experiencesData = [
   },
   {
     title: "Senior Full Stack Software Engineer at Intramed",
-    location: "Remote from Madrid, Spain",
+    location: "Buenos Aires, Argentina",
     description: `Building full-stack features for one of Latin America's leading platforms for
       healthcare professionals. Modular interfaces in React using a microfrontend architecture, REST
       microservices in NestJS behind a gateway, PostgreSQL with TypeORM, async messaging with Apache
@@ -147,32 +147,54 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "React",
-  "React Native",
-  "Microfrontends",
-  "TypeScript",
-  "JavaScript",
-  "Next.js",
-  "Astro",
-  "Redux",
-  "Tailwind",
-  "NestJS",
-  "Node.js",
-  "Express",
-  "Java",
-  "C#",
-  "ASP.NET",
-  "REST APIs",
-  "Microservices",
-  "PostgreSQL",
-  "MySQL",
-  "SQL Server",
-  "MongoDB",
-  "TypeORM",
-  "Prisma",
-  "AWS",
-  "Apache Kafka",
-  "Redis",
-  "Git",
+export type SkillGroup = {
+  readonly label: string;
+  readonly skills: readonly string[];
+};
+
+export const skillsData: readonly SkillGroup[] = [
+  {
+    label: "Frontend",
+    skills: [
+      "React",
+      "React Native",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind",
+      "Redux",
+      "Microfrontends",
+      "Astro",
+    ],
+  },
+  {
+    label: "Backend",
+    skills: [
+      "NestJS",
+      "Node.js",
+      "Java",
+      "Express",
+      "C#",
+      "ASP.NET",
+      "REST APIs",
+      "Microservices",
+    ],
+  },
+  {
+    label: "Data & Storage",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQL Server",
+      "TypeORM",
+      "Prisma",
+      "Redis",
+      "Apache Kafka",
+    ],
+  },
+  {
+    label: "Cloud & Tools",
+    skills: ["AWS", "Git"],
+  },
 ] as const;
