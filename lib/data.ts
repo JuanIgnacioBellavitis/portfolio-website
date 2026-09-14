@@ -96,7 +96,7 @@ export const experiencesData = [
   },
   {
     title: "Senior Full Stack Software Engineer at Intramed",
-    location: "Remote from Madrid, Spain",
+    location: "Buenos Aires, Argentina",
     description: `Building full-stack features for one of Latin America's leading platforms for
       healthcare professionals. Modular interfaces in React using a microfrontend architecture, REST
       microservices in NestJS behind a gateway, PostgreSQL with TypeORM, async messaging with Apache
