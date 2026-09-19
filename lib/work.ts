@@ -22,7 +22,7 @@ export const caseStudies: readonly CaseStudy[] = [
     company: "Intramed",
     title: "Modernizing a Healthcare Platform with Modular Frontend and Event-Driven Services",
     subtitle: "Distributed systems · React · NestJS · Kafka · AWS",
-    cardTags: ["React", "NestJS", "Apache Kafka", "Redis", "AWS"],
+    cardTags: ["React", "Next.js", "NestJS", "Apache Kafka", "AWS"],
     cardDescription:
       "Contributed to evolving one of Latin America's leading healthcare platforms through modular frontend architecture and independently deployable backend services.",
     overview:
@@ -45,14 +45,27 @@ export const caseStudies: readonly CaseStudy[] = [
       "Microfrontends introduced additional integration and coordination complexity compared with a traditional frontend monolith, but they provided clearer domain boundaries and allowed different parts of the platform to evolve with less coupling. For service communication, synchronous REST calls were appropriate when an immediate response was required, while Kafka was better suited for workflows that could be processed asynchronously and needed looser coupling between services. Redis added another infrastructure dependency, but it was useful for avoiding repeated work and improving responsiveness in frequently accessed flows.",
     outcome:
       "The work improved modularity and the ability to evolve different product areas independently. It also reduced coupling between services and supported more scalable communication patterns through asynchronous processing and caching. The technical SEO work improved indexing, metadata quality, and search visibility for the platform's professional content.",
-    techStack: ["React", "NestJS", "Apache Kafka", "Redis", "PostgreSQL", "TypeORM", "AWS", "TypeScript"],
+    techStack: [
+      "React",
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "NestJS",
+      "Apache Kafka",
+      "Redis",
+      "PostgreSQL",
+      "TypeORM",
+      "AWS",
+      "Jest",
+      "Microfrontends",
+    ],
   },
   {
     slug: "mercado-libre",
     company: "Mercado Libre",
     title: "Scaling Logistics Pricing Across Multiple LATAM Markets",
     subtitle: "Distributed systems · React · Java",
-    cardTags: ["React", "Java", "Distributed Systems"],
+    cardTags: ["React", "Java", "REST APIs", "Distributed Systems"],
     cardDescription:
       "Contributed to migrating logistics pricing capabilities into Mercado Libre's ecosystem and building a centralized source of truth for commercial and operational configuration across multiple Latin American markets.",
     overview:
@@ -74,7 +87,7 @@ export const caseStudies: readonly CaseStudy[] = [
       "Migrating existing logistics capabilities into Mercado Libre's ecosystem required balancing modernization with compatibility. Replacing everything at once would have increased operational risk, so the work favored incremental integration while adapting the migrated functionality to existing platform standards and services. Centralizing contract information created a clearer source of truth, but it also meant defining clear boundaries between commercial data and operational configuration — the goal was to improve consistency without creating excessive coupling between systems that had different responsibilities and release cycles.",
     outcome:
       "The project helped centralize logistics contract information and simplified the relationship between commercial agreements and operational pricing configurations. The migration enabled Kangu-related capabilities to operate within Mercado Libre's architecture and engineering standards. Improvements to pricing configuration and validation workflows reduced operational friction for teams managing carrier rates across different markets.",
-    techStack: ["React", "Java", "Distributed Systems", "TypeScript"],
+    techStack: ["React", "Java", "TypeScript", "REST APIs", "Distributed Systems"],
   },
   {
     slug: "siloreal",
@@ -103,7 +116,17 @@ export const caseStudies: readonly CaseStudy[] = [
       "Sensor-driven systems have to account for data arriving at different times and from sources that are not always under the application's control. The design therefore kept data collection and user-facing workflows sufficiently separated so that temporary delays in incoming data did not unnecessarily affect the rest of the application. Another trade-off was between exposing detailed sensor information and keeping the product usable for agricultural users: rather than treating raw measurements as the final product, the platform focused on turning them into monitoring views and alerts that users could act on.",
     outcome:
       "The platform gave agricultural users a centralized way to monitor silo bags remotely and receive automated alerts based on sensor data instead of relying on manual inspection. It improved visibility over assets distributed across different locations and made sensor and satellite data directly actionable through dashboards and notifications.",
-    techStack: ["React", "React Native", "Node.js", "Express", "MySQL", "AWS", "JavaScript"],
+    techStack: [
+      "React",
+      "React Native",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "AWS",
+      "JavaScript",
+      "REST APIs",
+      "IoT",
+    ],
   },
 ] as const;
 
