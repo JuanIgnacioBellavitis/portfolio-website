@@ -64,8 +64,8 @@ export const caseStudies: readonly CaseStudy[] = [
     slug: "mercado-libre",
     company: "Mercado Libre",
     title: "Scaling Logistics Pricing Across Multiple LATAM Markets",
-    subtitle: "Distributed systems · React · Java",
-    cardTags: ["React", "Java", "REST APIs", "Distributed Systems"],
+    subtitle: "Distributed systems · React · Spring Boot",
+    cardTags: ["React", "Spring Boot", "Java", "REST APIs"],
     cardDescription:
       "Contributed to migrating logistics pricing capabilities into Mercado Libre's ecosystem and building a centralized source of truth for commercial and operational configuration across multiple Latin American markets.",
     overview:
@@ -80,14 +80,28 @@ export const caseStudies: readonly CaseStudy[] = [
       "Incremental integration was necessary to limit operational risk.",
     ],
     architecture:
-      "The frontend was built with React using Mercado Libre's internal component libraries, focusing on making complex pricing and carrier configuration workflows usable for operational teams. On the backend, Java services operated in a distributed environment. A centralized logistics contracts platform was developed to act as a single source of truth between commercial agreements and the operational pricing configurations used across different markets.",
+      "The frontend was built with React using Mercado Libre's internal component libraries, focusing on making complex pricing and carrier configuration workflows usable for operational teams. On the backend, Java Spring Boot services operated in a distributed environment, with MySQL and MongoDB for persistence. A centralized logistics contracts platform was developed to act as a single source of truth between commercial agreements and the operational pricing configurations used across different markets.",
     contribution:
-      "I worked on both frontend and backend components: developed React interfaces for pricing and configuration workflows, contributed to Java backend services integrating the migrated Kangu capabilities with existing Mercado Libre systems, and participated in the development of the centralized contracts platform designed to synchronize commercial and operational data.",
+      "I worked on both frontend and backend components: developed React interfaces for pricing and configuration workflows (with Jest for frontend testing), contributed to Java Spring Boot services integrating the migrated Kangu capabilities with existing Mercado Libre systems — covered with JUnit, Mockito and MockMvc — and participated in the development of the centralized contracts platform designed to synchronize commercial and operational data.",
     tradeoffs:
       "Migrating existing logistics capabilities into Mercado Libre's ecosystem required balancing modernization with compatibility. Replacing everything at once would have increased operational risk, so the work favored incremental integration while adapting the migrated functionality to existing platform standards and services. Centralizing contract information created a clearer source of truth, but it also meant defining clear boundaries between commercial data and operational configuration — the goal was to improve consistency without creating excessive coupling between systems that had different responsibilities and release cycles.",
     outcome:
       "The project helped centralize logistics contract information and simplified the relationship between commercial agreements and operational pricing configurations. The migration enabled Kangu-related capabilities to operate within Mercado Libre's architecture and engineering standards. Improvements to pricing configuration and validation workflows reduced operational friction for teams managing carrier rates across different markets.",
-    techStack: ["React", "Java", "TypeScript", "REST APIs", "Distributed Systems"],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Jest",
+      "Java",
+      "Spring Boot",
+      "JUnit",
+      "Mockito",
+      "MockMvc",
+      "REST APIs",
+      "MySQL",
+      "MongoDB",
+      "DBeaver",
+      "Distributed Systems",
+    ],
   },
   {
     slug: "siloreal",
